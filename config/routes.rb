@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'urls#new'
+  get '/:short_url', to: 'urls#redirect_to_original'
+  resources :urls, only: [:new, :create, :show]
 end

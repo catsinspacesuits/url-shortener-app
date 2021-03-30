@@ -1,0 +1,4 @@
+<%= simple_form_for @url do |f| %>
+  <%= f.input :original_url, label: 'Please use format "http://" or "https://"' %>
+  <%= f.button :submit, 'create shortened url!' %>
+<% end %>
