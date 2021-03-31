@@ -1,2 +1,6 @@
 <h3>Original URL: <%= @url.original_url %></h3>
-<h3>Shortened URL: localhost:3000/<%= @url.short_url %></h3>
+<% if Rails.env.production? %>
+  <h3>Shortened URL: https://hidden-depths-12575.herokuapp.com/<%= @url.short_url %></h3>
+<% else %>
+  <h3>Shortened URL: localhost:3000/<%= @url.short_url %></h3>
+<% end %>
