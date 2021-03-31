@@ -1,14 +1,5 @@
 require 'rails_helper'
 
-# RSpec.describe Url, type: :model do
-#   before(:all) do
-#     @url = Url.create(original_url: "https://www.google.com/search?q=panda&sxsrf=ALeKk02bMVFQGDfaExjg3liAGJ6NNUbtWA161715sA", short_url: "7fh47dP")
-#   it 'checks that a url can be created' do
-#     expect(@url).to be_valid
-#   end
-# end
-
-
 RSpec.describe Url do 
 
   # Validations
@@ -52,9 +43,5 @@ RSpec.describe Url do
       url = Url.create(original_url: "http://google.com")
       expect(url).to be_valid 
     end
-
-
-
-
   end
 end 
