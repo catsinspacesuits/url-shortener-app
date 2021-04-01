@@ -1,4 +1,8 @@
+<h1 class="home-header header">URL Shortener</h1>
+<p class="home-text">Paste your link below and hit the button to shorten it! Please use format "http://" or "https://"</p>
+<div class="home-wrapper">
 <%= simple_form_for @url do |f| %>
-  <%= f.input :original_url, label: 'Please use format "http://" or "https://"' %>
-  <%= f.button :submit, 'create shortened url!' %>
-<% end %>
+  <%= f.input :original_url, label: false, id: 'original_url', class: 'form-input' %>
+  <%= f.button :submit, 'create shortened url!', class: 'button' %>
+<% end  %>
+</div>

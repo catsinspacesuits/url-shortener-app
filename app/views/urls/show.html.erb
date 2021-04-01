@@ -1,7 +1,9 @@
-<h2>Here is your shortened URL!</h2>
-<h3>Original URL: <%= @url.original_url %></h3>
-<% if Rails.env.production? %>
-  <h3>Shortened URL: https://hidden-depths-12575.herokuapp.com/<%= @url.short_url %></h3>
-<% else %>
-  <h3>Shortened URL: localhost:3000/<%= @url.short_url %></h3>
-<% end %>
+<div class="show-wrapper">
+  <h2 class="header">Here is your shortened URL!</h2>
+  <% if Rails.env.production? %>
+    <p class="shortened-url">https://hidden-depths-12575.herokuapp.com/<%= @url.short_url %></p>
+  <% else %>
+    <p class="shortened-url">localhost:3000/<%= @url.short_url %></p>
+  <% end %>
+  <div class="back-button"><%= link_to "Back", root_path %></div>
+</div>
